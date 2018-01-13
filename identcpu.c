@@ -199,7 +199,7 @@ const struct {
 	{ SEFF0ECX_UMIP,	"UMIP" },
 	{ SEFF0ECX_PKU,		"PKU" },
 }, cpu_seff0_edxfeatures[] = {
-	{ SEFF0EDX_IBRS,	"IBRS" },
+	{ SEFF0EDX_IBRS,	"IBRS,IBPB" },
 	{ SEFF0EDX_STIBP,	"STIBP" },
 }, cpu_tpm_eaxfeatures[] = {
 	{ TPM_SENSOR,		"SENSOR" },
