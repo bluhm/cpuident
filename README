@@ -1,0 +1,6 @@
+Print the CPU identifier and features flags in user land the same
+way as the OpenBSD kernel does.  The code has been copied from the
+amd64 kernel sources with slight modifications to make it compile
+and run.  The result is an ugly #ifdef hack.  But the goal is to
+keep the files close to their original.  This allows to sync them
+easily from the OpenBSD tree in the future.
