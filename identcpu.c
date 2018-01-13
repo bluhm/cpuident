@@ -428,9 +428,11 @@ cpu_freq(struct cpu_info *ci)
 {
 	uint64_t last_count, count;
 
+#if 0
 	count = cpu_freq_ctr(ci);
 	if (count != 0)
 		return (count);
+#endif
 
 	last_count = rdtsc();
 	delay(100000);

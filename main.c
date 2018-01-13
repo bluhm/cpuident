@@ -24,6 +24,8 @@ microsleep(int delay)
 
 void (*delay_func)(int) = microsleep;
 
+void cpu_readfeature(void);
+
 int
 main(int argc, char *argv[])
 {
@@ -33,6 +35,8 @@ main(int argc, char *argv[])
 	memset(&ci, 0, sizeof(ci));
 	strlcpy(dev.dv_xname, "cpu0", sizeof(dev.dv_xname));
 	ci.ci_dev = &dev;
+	ci.ci_flags = CPUF_PRESENT | CPUF_BSP | CPUF_PRIMARY;
+	cpu_readfeature();
 	identifycpu(&ci);
 
 	return 0;
